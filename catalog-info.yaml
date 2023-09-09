@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "EdgeService"
+  description: "This is the edge-service of the tripaway project! 🚀"
+  annotations:
+    github.com/project-slug: avollmaier/tripaway-edge-service
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/guests"
