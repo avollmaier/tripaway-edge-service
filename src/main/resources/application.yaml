@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: test
   application:
     name: edge-service
   config:
@@ -15,11 +17,10 @@ spring:
         initial-interval: ${CONFIG_SERVICE_INITIAL_INTERVAL:3000}
         multiplier: ${CONFIG_SERVICE_MULTIPLIER:1.3}
 
-
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${DISCOVERY_SERVICE_URL:http://localhost:8888/eureka/}
+      defaultZone: ${DISCOVERY_SERVICE_URL:http://localhost:8085/eureka/}
   instance:
     lease-expiration-duration-in-seconds: ${DISCOVERY_LEASE_EXPIRATION:3}
     lease-renewal-interval-in-seconds: ${DISCOVERY_LEASE_RENEWAL:1}
